@@ -91,9 +91,8 @@ plastic_data_all %>% group_by(region) %>% count(region)
 ### Ex 2.
 
 ```{r Ex2, message = FALSE}
-# Write your code here to answer exercise 2
-
-
+plastic_data_mis <- plastic_data_all %>% mutate(total_mismanaged_plastic = mismanaged_plastic * population)
+plastic_data_mis %>% group_by(region) %>% summarise(mean = mean(total_mismanaged_plastic))
 
 ```
 
