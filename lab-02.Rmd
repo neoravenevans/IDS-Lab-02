@@ -80,7 +80,7 @@ plastic_data_all %>% head(n = 10)
 ### Ex 1.
 
 ```{r Ex1, message = FALSE}
-# Write your code here to answer exercise 1
+plastic_data_all %>% group_by(region) %>% count(region)
 
 
 
